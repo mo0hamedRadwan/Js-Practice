@@ -1,0 +1,789 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins" , sans-serif;
+
+}
+
+/* body{scroll-behavior: smooth;} */
+
+section{
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid red;
+}
+
+section .project-title{
+    color: #333;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.project-1{
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.project-1 .btn{
+    display: block;
+    padding: 10px 30px;
+    font-size: 1em;
+    color: #111;
+    border: 1px solid #111;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.project-1 .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-1 .container .box{
+    width: 250px;
+    height: 150px;
+    /* background-color: #f00; */
+    border: 5px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Peoject 2 Style */
+
+.project-2{
+    width: 100%;
+    height: 725px;
+    background-color: #e3f2fd;
+}
+
+.project-2 .wrapper{
+    width: 420px;
+    height: 270px;
+    padding: 30px;
+    background-color: #0b85ff;
+    border-radius: 7px;
+    transition: height 0.2s ease;
+}
+
+.project-2 .wrapper.active{
+    height: 525px;
+}
+
+.project-2 .wrapper .form{
+    height: 210px;
+    border-radius: 7px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    transition: height 0.2s ease;
+}
+
+.project-2 .wrapper.active .form{
+    height: 225px;
+    pointer-events: none;
+}
+
+.project-2 .wrapper .form img{
+    max-width: 148px;
+    display: none;
+}
+
+.project-2 .wrapper.active .form img{
+    display: block;
+}
+
+.project-2 .wrapper.active .form .content{
+    display: none;
+}
+
+.project-2 .wrapper .form .content i{
+    color: #0b85ff;
+    font-size: 55px;
+}
+
+.project-2 .wrapper .form .content p{
+    color: #0b85ff;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.project-2 .wrapper .details{
+    margin-top: 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s 0.1s ease;
+}
+
+.project-2 .wrapper.active .details{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.project-2 .wrapper .details textarea{
+    width: 100%;
+    height: 128px;
+    padding: 10px 15px;
+    border: 1px solid #fff;
+    color: #fff;
+    resize: none;
+    background: none;
+    outline: none;
+}
+
+.project-2 .wrapper .details .buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-2 .wrapper .details .buttons button{
+    height: 55px;
+    width: calc(100% / 2 - 10px);
+    background-color: #fff;
+    color: #0b85ff;
+    font-size: 16px;
+    font-weight: 500;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Project 3 Style */
+
+.project-3{
+    width: 100%;
+    height: 700px;
+    background-color: #3498DB;
+}
+
+.project-3 .wrapper{
+    max-width: 410px;
+    height: 260px;
+    padding: 16px 25px;
+    border-radius: 7px;
+    background-color: #fff;
+    transition: height 0.2s ease;
+}
+
+.project-3 .wrapper.active{
+    height: 550px;
+}
+
+.project-3 .wrapper header h1{
+    font-size: 21px;
+    font-weight: 500;
+}
+
+.project-3 .wrapper header p{
+    margin-top: 5px;
+    font-size: 16px;
+    color: #474747;
+}
+
+.project-3 .wrapper .form{
+    margin: 20px 0 30px;
+}
+
+.project-3 .wrapper .form :where(input, button){
+    width: 100%;
+    height: 55px;
+
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.project-3 .wrapper .form input{
+    font-size: 18px;
+    padding: 0 18px;
+    border: 1px solid #999;
+}
+
+.project-3 .wrapper .form button{
+    margin-top: 20px;
+    background-color: #3498DB;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.project-3 .wrapper .qr-code{
+    padding: 33px 0;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s 0.1s ease;
+}
+
+.project-3 .wrapper.active .qr-code{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.project-3 .wrapper.active .qr-code img{
+    cursor: pointer;
+}
+
+/* Project 4 Style */
+
+.project-4{
+    background-color: #5372f0;
+    padding: 200px 0;
+}
+
+.project-4 .container{
+    width: 690px;
+    padding: 30px;
+    border-radius: 7px;
+    background-color: #fff;
+}
+
+.project-4 .container .wrapper{
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+.project-4 .container .wrapper .text-input{
+    display: flex;
+    border-bottom: 1px solid #bbb;
+}
+
+.project-4 .container .wrapper .text-input textarea{
+    width: 100%;
+    height: 250px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+
+    resize: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* .project-4 .container .wrapper .text-input .from-text{} */
+
+.project-4 .container .wrapper .text-input .to-text{
+    border-radius: 0;
+    border-left: 1px solid #bbb;
+}
+
+.project-4 .container .wrapper .controls{
+    list-style: none;
+    padding: 12px 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-4 .container .wrapper .controls .icons{
+    width: 38%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-4 .container .wrapper .controls .row.from .icons{
+    padding-right: 15px;
+    border-right: 1px solid #bbb;
+}
+
+.project-4 .container .wrapper .controls .row.to .icons{
+    padding-left: 15px;
+    border-left: 1px solid #bbb;
+}
+
+.project-4 .container .wrapper .controls .icons i{
+    width: 50px;
+    font-size: 16px;
+    color: #9f9f9f;
+    cursor: pointer;
+}
+
+.project-4 .container .wrapper .controls li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-4 .container .wrapper .controls .row select{
+    font-size: 18px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.project-4 .container .wrapper .controls .exchange{
+    font-size: 16px;
+    color: #9f9f9f;
+    cursor: pointer;
+}
+
+.project-4 .container button{
+    width: 100%;
+    padding: 14px;
+    margin-top: 20px;
+    background-color: #5372f0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 7px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Project 5 Style */
+
+.project-5{
+    padding: 200px;
+    background-color: #5256AD;
+}
+
+.project-5 .wrapper{
+    width: 370px;
+    padding: 25px 30px;
+    border-radius: 7px;
+    background-color: #fff;
+}
+
+.project-5 .wrapper header{
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.project-5 .wrapper form{
+    margin: 35px 0 20px;
+}
+
+.project-5 .wrapper form .row{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.project-5 .wrapper form .row label{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.project-5 .wrapper form .row textarea{
+    width: 100%;
+    height: 110px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    border: 1px solid #999;
+    resize: none;
+    outline: none;
+}
+
+.project-5 .wrapper form .row .outer{
+    height: 47px;
+    padding: 0 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-5 .wrapper form .row select{
+    width: 100%;
+    font-size: 14px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.project-5 .wrapper form button{
+    width: 100%;
+    height: 52px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #5256AD;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Project 6 Style */
+
+.project-6{
+    background-color: #6564ff;
+    padding: 200px 0;
+}
+
+.project-6 .wrapper{
+    width: 400px;
+    height: 500px;
+    padding: 25px;
+    background-color: #f8f8f8;
+    border-radius: 10px;
+}
+
+.project-6 .wrapper .cards{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.project-6 .wrapper .cards .card{
+    width: calc(100% / 4 - 10px);
+    height: calc(100% / 5 - 10px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+    position: relative;
+    perspective: 800px;
+    transform-style: preserve-3d;
+}
+
+.project-6 .wrapper .cards .card.shake{
+    animation: AnimateShake 0.35s ease-in-out;
+}
+
+@keyframes AnimateShake {
+    0%,100%{
+        transform: translateX(0px);
+    }
+    20%{
+        transform: translateX(-13px);
+    }
+    40%{
+        transform: translateX(13px);
+    }
+    60%{
+        transform: translateX(-8px);
+    }
+    80%{
+        transform: translateX(8px);
+    }
+}
+
+.project-6 .wrapper .cards .card .view{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    /* background-color: lightgreen; */
+    border-radius: 7px;
+    box-shadow: 0px 3px 10px rgba(0,0,0, 0.1);
+
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.3s linear;
+    pointer-events: none;
+    user-select: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-6 .wrapper .cards .card .front-view{
+    transform: rotateY(0deg);
+}
+
+.project-6 .wrapper .cards .card .back-view{
+    transform: rotateY(-180deg);
+}
+
+.project-6 .wrapper .cards .card.flip .front-view{
+    transform: rotateY(180deg);
+}
+
+.project-6 .wrapper .cards .card.flip .back-view{
+    transform: rotateY(0deg);
+}
+
+.project-6 .wrapper .cards .card .back-view img{
+    max-width: 50px;
+}
+
+.project-6 .wrapper .cards .details{
+    width: 100%;
+    height: calc(100% / 5 - 10px);
+    padding: 0 20px;
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0px 3px 10px rgba(0,0,0, 0.1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-6 .wrapper .cards .details p{
+    font-size: 20px;
+    padding-right: 20px;
+    border-right: 1px solid #ccc;
+}
+
+.project-6 .wrapper .cards .details button{
+    padding: 4px 12px;
+    border: 3px solid #6564ff;
+    border-radius: 5px;
+    color: #6564ff;
+    font-weight: 500;
+    
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Project 7 Style */
+
+.project-7{
+    padding: 200px 0;
+    background-color: #17a2b8;
+}
+
+.project-7 .wrapper{
+    width: 770px;
+    padding: 35px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.project-7 .wrapper .input-field{
+    opacity: 0;
+    pointer-events: none;
+    /* z-index: -99; */
+    /* position: absolute; */
+}
+
+.project-7 .wrapper .content-box{
+    padding: 13px 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+.project-7 .wrapper .content-box .typing-text{
+    max-height: 255px;
+    overflow-y: auto;
+}
+
+.project-7 .wrapper .content-box .typing-text::-webkit-scrollbar{
+    width: 0;
+}
+
+.project-7 .wrapper .content-box .typing-text p{
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-align: justify;
+    word-break: break-all;
+}
+
+.project-7 .wrapper .content-box .typing-text p span{
+    position: relative;
+}
+
+.project-7 .wrapper .content-box .typing-text p span.active{
+    color: #17a2b8;
+}
+.project-7 .wrapper .content-box .typing-text p span.active::before{
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: #17a2b8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    animation: blind 1s ease-in-out infinite;
+}
+
+@keyframes blind {
+    0%,100%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+}
+
+.project-7 .wrapper .content-box .typing-text p span.correct{
+    color: #56964f;
+}
+
+.project-7 .wrapper .content-box .typing-text p span.incorrect{
+    color: #cb3439;
+    background-color: #ffc0cb;
+    border-radius: 4px;
+    border: 1px solid #fff;
+}
+
+.project-7 .wrapper .content{
+    padding: 12px 0;
+    margin-top: 18px;
+    border-top: 1px solid #ccc;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-7 .wrapper .content .result-details{
+    width: calc(100% - 140px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-7 .wrapper .content .result-details li{
+    height: 22px;
+    list-style: none;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.project-7 .wrapper .content .result-details li:not(:first-child){
+    padding-left: 22px;
+    border-left: 1px solid #ccc;
+}
+
+.project-7 .wrapper .content .result-details li p{
+    font-size: 19px;
+}
+
+.project-7 .wrapper .content .result-details li span{
+    display: block;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.project-7 .wrapper .content .result-details li span b{
+    font-weight: 600;
+}
+
+.project-7 .wrapper .content button{
+    width: 105px;
+    padding: 8px 0;
+    border-radius: 7px;
+    background-color: #17a2b8;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* Project 10 Style */
+
+.project-10{
+    padding: 200px 0;
+    background-image: linear-gradient(135deg, #9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+}
+
+.project-10 .wrapper{
+    width: 100%;
+    max-width: 480px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px rgba(0,0,0, 0.1);
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.project-10 .wrapper.hide{
+    pointer-events: none;
+    user-select: none;
+    opacity: 0;
+}
+
+.project-10 .wrapper .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.project-10 .wrapper .content .warn-icon{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-image: linear-gradient(135deg, #9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-10 .wrapper .content .warn-icon span{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-10 .wrapper .content .warn-icon span i{
+    font-size: 50px;
+    background-image: linear-gradient(135deg, #9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-10 .wrapper .content h2{
+    margin: 35px 0 20px;
+    font-size: 32px;
+
+}
+
+.project-10 .wrapper .content p{
+    font-size: 20px;
+    color: #777;
+}
+
+.project-10 .wrapper .content button{
+    margin-top: 30px;
+    padding: 10px 40px;
+    font-size: 20px;
+    border-radius: 30px;
+    background-image: linear-gradient(135deg, #9b27ca 0%, #9927cf 0%, #d33639 100%, #f92121 100%);
+    color: #fff;
+
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
